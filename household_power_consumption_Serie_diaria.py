@@ -864,6 +864,7 @@ normalizados  = scaler.transform(train_rn)
 train_rn.loc[:, 'Global_active_power'] = normalizados
 normalizados  = scaler.transform(test_rn)
 test_rn.loc[:, 'Global_active_power'] = normalizados
+tabla_rn = pd.concat([train_rn, test_rn], axis=0)
 # ============================================================== #
 
 # =========== CONTROL DE ENTRENAMIENTO DETERMINISTA ============ #
